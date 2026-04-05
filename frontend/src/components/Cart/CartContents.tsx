@@ -1,3 +1,5 @@
+import { RiDeleteBin3Line } from "react-icons/ri";
+
 const CartContents = () => {
 
     const cartProducts = [
@@ -52,7 +54,12 @@ const CartContents = () => {
                             </div>
                         </div>
                     </div>
-                    <p className="text-sm font-medium">${product.price}</p>
+                    <div className="text-right">
+                        <p className="text-sm font-medium">${product.price}</p>
+                        <button>
+                            <RiDeleteBin3Line className="h-6 w-6 mt-2 text-red-900" />
+                        </button>
+                    </div>
                 </div>
             ))}
         </div>
