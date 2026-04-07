@@ -1,35 +1,10 @@
-import { RiDeleteBin3Line } from "react-icons/ri"
+import { RiDeleteBin3Line } from "react-icons/ri";
 
 const CartContents = () => {
-
     const cartProducts = [
-        {
-            productId: 1,
-            name: "T-shirt",
-            size: "M",
-            color: "Red",
-            quantity: 1,
-            price: 15,
-            image: "https://picsum.photos/200/?random=1",
-        },
-        {
-            productId: 2,
-            name: "Jeans",
-            size: "L",
-            color: "Blue",
-            quantity: 1,
-            price: 25,
-            image: "https://picsum.photos/200/?random=2",
-        },
-        {
-            productId: 3,
-            name: "T-shirt",
-            size: "M",
-            color: "Red",
-            quantity: 1,
-            price: 15,
-            image: "https://picsum.photos/200/?random=3",
-        }
+        { productId: 1, name: "T-shirt",  size: "M", color: "Red",  quantity: 1, price: 15, image: "https://picsum.photos/200/?random=1" },
+        { productId: 2, name: "Jeans",    size: "L", color: "Blue", quantity: 1, price: 25, image: "https://picsum.photos/200/?random=2" },
+        { productId: 3, name: "T-shirt",  size: "M", color: "Red",  quantity: 1, price: 15, image: "https://picsum.photos/200/?random=3" },
     ];
 
     return (
@@ -54,11 +29,12 @@ const CartContents = () => {
                             </div>
                         </div>
                     </div>
-                    <p className="text-sm font-medium">${product.price}</p>
-
-                    <button>
-                        <RiDeleteBin3Line className="h-6 w-6 mt-2 text-red-600"/>
-                    </button>
+                    <div className="text-right">
+                        <p className="text-sm font-medium">${product.price}</p>
+                        <button>
+                            <RiDeleteBin3Line className="h-6 w-6 mt-2 text-red-600" />
+                        </button>
+                    </div>
                 </div>
             ))}
         </div>
