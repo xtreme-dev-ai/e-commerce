@@ -5,11 +5,18 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log(email, password);
+  };
   return (
     <div className="flex flex-col md:flex-row items-stretch w-full min-h-[calc(100vh-100px)]">
       {/* Form Section */}
       <div className="w-full md:w-1/2 flex justify-center items-center p-4 sm:p-8 md:p-12">
-        <form className="w-full max-w-md drop-shadow-xl bg-white p-6 sm:p-8 border border-gray-200 shadow-sm rounded-xl transition-all duration-300 hover:shadow-md">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full max-w-md drop-shadow-xl bg-white p-6 sm:p-8 border border-gray-200 shadow-sm rounded-xl transition-all duration-300 hover:shadow-md"
+        >
           <div className="flex justify-center mb-6">
             <h2 className="text-2xl sm:text-3xl font-medium tracking-tight">
               E-commerce
