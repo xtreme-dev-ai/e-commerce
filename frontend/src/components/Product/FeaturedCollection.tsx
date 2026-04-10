@@ -3,7 +3,7 @@ import featured from '../../assets/featured.webp';
 
 const FeaturedCollection = () => {
   return (
-    <section className="py-16 px-4 lg:px-0">
+    <section className="py-16 px-4 lg:px-16">
       <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center bg-green-50 rounded-3xl">
         {/* Left content */}
         <div className="lg:w-1/2 text-center lg:text-left p-8">

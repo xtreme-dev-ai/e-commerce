@@ -15,12 +15,13 @@ const ProductGrid = ({ products }: { products: Product[] }) => {
           <div className="bg-white p-4 rounded-lg">
             <div className="w-full h-96 mb-4">
               <img
-                src={product.images[0]?.url}
+                src={product.images[0]?.url} 
                 alt={product.images[0]?.altText || product.name}
                 className="w-full h-full object-cover rounded-lg"
               />
+
             </div>
-            <h3 className="text-sm font-medium">{product.name}</h3>
+            <h3 className="text-sm mb-2 font-medium">{product.name}</h3>
             <p className="text-gray-500 text-sm mt-1 tracking-tighter">
               ${product.price}
             </p>
