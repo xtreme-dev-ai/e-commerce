@@ -9,13 +9,17 @@ const selectedProduct = {
     description: "This is a stylish Jacket",
     brand: "FashionBrand",
     material: "Leather",
-    sizes: ["S", "M", "L", "XL"],
+    sizes: ["S",  "M", "L", "XL"],
     colors: ["red", "black"],
     images: [
         { url: "https://picsum.photos/500/500?random=1", altText: "Stylish Jacket 1" },
         { url: "https://picsum.photos/500/500?random=2", altText: "Stylish Jacket 2" },
     ],
 };
+
+
+
+
 
 const similarProducts=[
     {
@@ -25,7 +29,7 @@ const similarProducts=[
         images:[{url:"https://picsum.photos/500/500?random=3"}],
 
     },
-    {
+       {
         _id:2,
         name:"Product 1",
         price:100,
