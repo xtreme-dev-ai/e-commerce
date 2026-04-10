@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 interface FilterState {
   category: string;
@@ -14,6 +14,7 @@ interface FilterState {
 
 const FilterSidebar = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const navigate=useNavigate();
   const [filters, setFilters] = useState<FilterState>({
     category: "",
     gender: "",
@@ -101,6 +102,8 @@ const FilterSidebar = () => {
     updateURLParams(newFilters);
   };
 
+
+
   const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newPrice = Number(e.target.value);
     setPriceRange([0, newPrice]);
@@ -121,7 +124,9 @@ const FilterSidebar = () => {
       }
     });
     setSearchParams(params);
+    navigate(`?${params.toString()}`);
   };
+
 
   return (
     <div className="p-4">
@@ -137,6 +142,7 @@ const FilterSidebar = () => {
               name="category"
               value={category}
               onChange={handleFilterChange}
+            
               checked={filters.category === category}
               className="mr-2 h-4 w-4 text-blue-500 focus:ring-blue-400 border-gray-300"
             />

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import login from '../assets/login.webp';
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -12,7 +13,7 @@ const Login = () => {
   return (
     <div className="flex flex-col md:flex-row items-stretch w-full min-h-[calc(100vh-100px)]">
       {/* Form Section */}
-      <div className="w-full md:w-1/2 flex justify-center items-center p-4 sm:p-8 md:p-12">
+      <div className="w-full md:w-1/2 flex-col justify-center items-center p-4 sm:p-8 md:p-12">
         <form
           onSubmit={handleSubmit}
           className="w-full max-w-md drop-shadow-xl bg-white p-6 sm:p-8 border border-gray-200 shadow-sm rounded-xl transition-all duration-300 hover:shadow-md"
